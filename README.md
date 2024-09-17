@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# Todo List & Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con React que combina una lista de tareas (Todo List) y un sistema de seguimiento de gastos. La interfaz de usuario está construida con Chakra UI, proporcionando un diseño moderno y accesible. Para garantizar la calidad del código, se utiliza Jest para las pruebas unitarias y de integración.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Lista de tareas (Todo List)
 
-## Expanding the ESLint configuration
+- Crear, editar y eliminar tareas.
+- Marcar tareas como completadas.
+- Filtrar tareas por estado (completadas/pendientes).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Seguimiento de gastos
 
-- Configure the top-level `parserOptions` property like this:
+- Añadir y editar registros de gastos.
+- Visualización de los gastos totales.
+- Filtrar gastos por categorías.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tecnologías
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React**: Para la construcción de la interfaz interactiva y gestión del estado de la aplicación.
+- **Chakra UI**: Para proporcionar una interfaz de usuario accesible y altamente personalizable.
+- **Jest**: Utilizado para las pruebas unitarias y de integración, asegurando la fiabilidad y corrección del código.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Objetivos del proyecto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Crear una herramienta eficiente para la gestión diaria de tareas y finanzas personales.
+- Asegurar una alta calidad del código mediante la implementación de pruebas automáticas con Jest.
+
+## Cómo ejecutar el proyecto
+
+1. Clona el repositorio.
+2. Ejecuta `npm install` para instalar las dependencias.
+3. Corre `npm start` para iniciar la aplicación en modo de desarrollo.
+4. Para ejecutar las pruebas, usa `npm test` con Jest.
